@@ -1,0 +1,11 @@
+#!/bin/bash
+
+suffix=$1
+shift
+
+for file in "$@"
+do
+  new_filename="${file}${suffix}"
+  mv "$file" "$new_filename"
+done
+
