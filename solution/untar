@@ -1,0 +1,11 @@
+#!/bin/bash
+
+archive=$1
+dirname="${archive}.unpacked"
+
+if [ ! -d "$dirname" ]; then
+    mkdir "$dirname"
+fi
+
+tar -xf "$archive" -C "$dirname"
+
